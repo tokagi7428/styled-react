@@ -1,0 +1,40 @@
+
+.btn-read{
+    width:fit-content;
+   padding: 10px 20px;
+   border-radius: 20px;
+   outline: none;
+   border: none;
+   border: 1px solid lightgreen;
+   background-color: #d67ef6;
+   font-weight: bold;
+   color: #fff;
+   font-size: 16px;
+   cursor: pointer;
+   
+}
+
+.btn-read:hover{
+    background-color: #b158d2;
+    border: 2px solid rgb(8, 8, 223);
+}
+
+.footers{
+    background-color: black;
+    color:#fff;
+    text-align: center;
+    padding: 3rem;
+    margin-top: 4rem;
+}
+
+.footers ul li{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.footers p{
+    padding-top: 1rem;
+    font-size: 18px;
+    font-weight:700;
+    word-spacing: 2px;
+}

@@ -1,38 +1,78 @@
-import React from "react";
-import "./App.css";
-import styled from "styled-components";
-const Title = styled.h1`
-  font-size: 1.5em;
-  color: red;
-`;
+import React, { Component } from "react";
+import Banner from "./components/Banner.jsx";
+import Card from "./components/Card.jsx";
+import Footer from "./components/Footer.jsx";
+import Navbar from "./components/Navbar.jsx";
+export default class App extends Component {
+  // attribute only
 
-const Container = styled.div`
-  padding: 3px 2rem;
-  background: lightblue;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 16px;
-`;
-
-const NavMenu = styled.ul`
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-`;
-function App() {
-  return (
-    <div>
-      <Container>
-        <Title>red</Title>
-        <NavMenu>
-          <li>item1</li>
-          <li>item1</li>
-          <li>item1</li>
-        </NavMenu>
-      </Container>
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <Banner />
+        <div className="" style={{ display: "flex" }}>
+          <Card />
+          <Card />
+          <Card />
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 }
 
-export default App;
+// import React, { Component } from "react";
+// import Navbar from "./components/Navbar.jsx";
+// import { StyledContainer } from "./Styles.jsx";
+// export default class App extends Component {
+//   // attribute only
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       brand: "Ford",
+//       model: "Mustang",
+//       color: "red",
+//       year: 1990,
+//     };
+//   }
+//   changeColor = () => {
+//     this.setState({ color: "blue" });
+//   };
+//   // function only
+//   componentDidMount() {
+//     setTimeout(() => {
+//       this.setState({ color: "yellow" });
+//     }, 2000);
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <Navbar />
+//         <Car props={this.state} />
+//         <button onClick={this.changeColor}>click me</button>
+//       </div>
+//     );
+//   }
+// }
+
+// class Car extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       Owner: "A tom",
+//     };
+//   }
+//   componentDidMount() {
+//     console.log(this.props);
+//   }
+//   render() {
+//     return (
+//       <>
+//         {this.props.props.brand}
+//         {this.props.props.year}
+//         {this.state.Owner}
+//       </>
+//     );
+//   }
+// }
